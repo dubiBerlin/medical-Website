@@ -5,10 +5,14 @@
 @media only screen and (max-width:1200px) {
     .hero-text-box{
        width: 100%;
-        padding: 0 2%;
+       padding: 0 2%;
     }
     .row {
         padding: 0 2%;
+    }
+    
+    .logo1 {
+    	height: 250px;
     }
 }
 
@@ -17,10 +21,19 @@
 
 
 /* Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width:1110px) {
+@media only screen and (max-width:1023px) {
     body {
         font-size: 18px;
     }
+    
+    h1 {
+    	font-size: 180%;
+    }
+    
+    .logo1 {
+    	height: 230px;
+    }
+    
     section {
         padding: 60px 0;
     }
@@ -65,50 +78,26 @@
         width: 80%;
     }
     
+	.main-nav{
+	    margin-top: 40px;
+	}
+	
     .logo-sticky {
 	    display: none;
-	    height: 130px;
+	    height: 70px;
 	    width: auto;
 	    float: left;
 	}
 	
-	.logo {
+	.sticky .main-nav{
+	    margin-top: 50px;
+	}
+	
+	/*.logo {
 	    height: 130px;
 	    width: auto;
 	    float: left;
-	}
-	
-	.main-nav {
-        float: left;
-        margin-top: 30px;
-        margin-left: 25px;
-    }
-    
-    .main-nav li {
-        display: block;
-    }
-    
-    .main-nav li a:link,
-    .main-nav li a:visited {
-        display: block;
-        border: 0;
-        padding: 10px 0;
-        font-size: 100%;
-    }
-    
-    .mobile-nav-icon {
-        display: inline-block;
-    }
-    
-    .sticky .mobile-nav-icon {
-        margin-top: 10px;
-    }
-    
-	 /* das icon stylen zugriff über den klassennamen der eltern */
-    .sticky .mobile-nav-icon i {
-        font-size: 200%;
-        color: #555;
-    }
+	}*/
 }
 
 
@@ -117,6 +106,10 @@
 @media only screen and (max-width: 767px) {
     body {
         font-size: 16px;
+    }
+    
+    .logo1 {
+    	height: 200px;
     }
     
     section {
@@ -226,10 +219,19 @@
    section { padding: 25px 0; }
    .contact-form {width: 100%; }
     
+    .main-nav {
+    	margin-top: 15px;
+    }
+    
    .logo-sticky {
         height: 90px;
         border-bottom: 0;
    }
+    
+    .logo1 {
+    	height: 200px;
+    }
+    
    
    .main-nav li a:link,
    .main-nav li a:visited {

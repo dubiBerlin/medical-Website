@@ -65,17 +65,29 @@ section {
 }
 
 /**/
-header{
+/*header{
     /* linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) transperiert das background img  */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
+   /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(imgr/start.png);
+    /* Displays the complete background image */
+    /*background-size: cover;
+    /* Macht so dass das background img stehen bleibt */
+    /*background-attachment: fixed;
+    background-position: center;
+     /* 100% des Viewports um das Background-image komplett darzustellen */
+   /* height: 100vh;
+}*/
+
+.child-container {
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(imgr/start.png);
     /* Displays the complete background image */
     background-size: cover;
+    /* Macht so dass das background img stehen bleibt */
+    background-attachment: fixed;
     background-position: center;
      /* 100% des Viewports um das Background-image komplett darzustellen */
     height: 100vh;
-    /* Macht so dass das background img stehen bleibt */
-    background-attachment: fixed;
 }
 
 .hero-text-box{
@@ -340,7 +352,7 @@ input[type=submit]:active{
 }
 
 .sticky .main-nav{
-    margin-top: 7%;
+    margin-top: 75px;
 }
 
 .sticky .main-nav li a:link,
@@ -356,9 +368,10 @@ input[type=submit]:active{
 
 .logo-sticky {
     display: none;
-    height: 130px;
+    height: 120px;
     width: auto;
     float: left;
+    margin: 5px 0;
 }
 
 
