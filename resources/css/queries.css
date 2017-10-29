@@ -14,10 +14,24 @@
     .logo1 {
     	height: 250px;
     }
+    
+    .logo-sticky {
+	    display: none;
+	    height: 65px;
+	    width: auto;
+	    float: left;
+	}
+	
+	.sticky .main-nav{
+	    margin-top: 30px;
+	}
+    
+     .main-nav li a:link,
+    .main-nav li a:visited {
+        font-size: 80%;
+    }
+	
 }
-
-
-
 
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -62,9 +76,6 @@
         width: 17px;
         margin-right: 5px;
     }
-    .city-feature {
-        font-size: 90%;
-    }
     
     .plan-box {
         width: 100%;
@@ -90,7 +101,7 @@
 	}
 	
 	.sticky .main-nav{
-	    margin-top: 50px;
+	    margin-top: 45px;
 	}
 	
 	/*.logo {
@@ -100,10 +111,49 @@
 	}*/
 }
 
+@media screen and (max-width: 991px) {
+     /* start of large tablet styles */
+    .child-container, 
+    .section-komentare {
+        background-attachment: local;
+    }
+
+    .logo-sticky {
+        height: 65px;
+    }
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        font-size: 80%;
+    }
+    
+    .sticky .main-nav{
+	    margin-top: 45px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+     /* start of large tablet styles */
+    .child-container {
+        background-attachment: local;
+    }
+
+    .logo-sticky {
+        height: 65px;
+    }
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        font-size: 70%;
+    }
+    
+    .sticky .main-nav{
+	    margin-top: 45px;
+    }
+}
 
 
 /* Small phones to small tablets: from 481px to 767px */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 835px) {
     body {
         font-size: 16px;
     }
@@ -151,6 +201,7 @@
     .main-nav li a:visited {
         display: block;
         border: 0;
+        font-size: 50%;
         padding: 10px 0 ;
         font-size: 100%; 
     }
@@ -161,7 +212,10 @@
     }
     
     /* DIE Sticky Navigation */
-    .sticky .main-nav{ margin-top: 10px; }
+    .sticky .main-nav{
+        margin-top: 10px; 
+        font-size: 75%;
+    }
 
     .sticky .main-nav li a:link,
     .sticky .main-nav li a:visited { padding: 10px 0; }
@@ -224,30 +278,32 @@
     }
     
    .logo-sticky {
-        height: 90px;
+        height: 60px;
         border-bottom: 0;
    }
     
     .logo1 {
-    	height: 200px;
+    	height: 130px;
     }
     
    
    .main-nav li a:link,
    .main-nav li a:visited {
-       font-size: 80%;
+       font-size: 73%;
        line-height: 10px;
    }
    
    
 	.main-nav{
-	    margin-top: -10px;
+	    margin-top: 5px;
         z-index: 9999;
 	}
 	
-	.sticky .main-nav{
-	    margin-top: -10px;
-	}
+    /* DIE Sticky Navigation */
+    .sticky .main-nav{
+        margin-top: 10px; 
+        font-size: 75%;
+    }
 	
 	.logo {
     	height: 90px;

@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     
    /* for sticky navigation */    
-   $(".js--section-features").waypoint(function(direction) {
+   $(".js--section-start").waypoint(function(direction) {
        
         if (direction == "down") {
            $("nav").addClass("sticky");
@@ -27,7 +27,7 @@ $(document).ready(function(){
      /* scroll for buttons */
     $(".js-scroll-to-start").click( function(){
        
-        $("html, body").animate( {scrollTop: $(".js--section-features").offset().top},1000 );
+        $("html, body").animate( {scrollTop: $(".js--section-start").offset().top},1000 );
         
     });
     

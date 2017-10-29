@@ -352,7 +352,7 @@ input[type=submit]:active{
 }
 
 .sticky .main-nav{
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .sticky .main-nav li a:link,
@@ -368,7 +368,7 @@ input[type=submit]:active{
 
 .logo-sticky {
     display: none;
-    height: 120px;
+    height: 90px;
     width: auto;
     float: left;
     margin: 5px 0;
@@ -378,65 +378,11 @@ input[type=submit]:active{
 
 
 /* ---------------------------- */
-/* FEATURES */
+/* START */
 /* ---------------------------- */
-.section-features .long-copy {
+.section-start .long-copy {
     margin-bottom: 30px;
 }
-
-/* ---------------------------- */
-/* MEALS*/
-/* ---------------------------- */
-
-.meals-showcase {
-    list-style: none; /* nicht als Liste anzeigen */
-    width: 100%;
-}
-
-.meals-showcase li {
-    display: block;
-    float: left; /* Bilder nebeneinander */
-    width: 25%; /* 100% ist die Liste, wir haben 4 Bilder, also je Bild 25% */
-    height: ;
-}
-
-.meal-photo {
-    width: 100%; /* es hat die selbe größe wie das Elternteil welches is "meals-showcase li" */
-    margin: 0; 
-    overflow: hidden;
-    /* in Kombination mit opacity in "meal-photo img" wird das Bild dunkler */
-    background-color: #000;
-}
-
-.meal-photo img {
-    width: 100%; /* Das Bild ist so groß wie der Container */
-    height: auto;
-    /* vergößert das Bilf auf 115% */
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-    /* die Transformierung von transform:scale wird animiert und die opacity auch */
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-    /* Das image wird dunkler gemacht auf 70% und die backgroundcolor des parent containers "meal-photo"
-       wird auf auf schwarz gesetzt */
-    opacity: 0.7;
-}
-
-.meal-photo img:hover {
-    /* vergößert das Bilf auf 103% wenn man mit der Maus rüber geht*/
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-    /* Die helligkeit erhöhen */
-    opacity: 1;
-}
-
-/* Der Abstand der zweiten section zur oberen verkleinern */
-.section-meals {
-    padding: 0;
-}
-
 
 
 /* ---------------------------- */
@@ -467,25 +413,6 @@ input[type=submit]:active{
     width: 40%;
 }
 
-.works-step {
-    margin-bottom: 50px;
-    width: 100%;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-/* Die Nummern */
-.works-step div {
-    color: #104686;
-    display: inline-block;
-    height: 50px;
-    width: 100%;
-    text-align: left;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
-    background-color: red;
-}
 
 
 .btn-app:link,
@@ -502,16 +429,6 @@ input[type=submit]:active{
 }
 
 
-/* Abstand des letzten Steps zu den zwei App Store buttons */
-.works-step:last-of-type {
-    margin-bottom: 80px;
-}
-
-
-/* ---------------------------- */
-/* WE ARE IN THESE CITIES */
-/* ---------------------------- */
-
 .box img {
     /* Das Bild soll so breit wie der Elternteil sein, ihn komplett ausfüllen */
     width: 100%;
@@ -519,12 +436,6 @@ input[type=submit]:active{
     height: auto;
     /* Abstand zum unteren <h3> Element erstellen */
     margin-bottom: 15px;
-}
-
-.city-feature {
-    /* Abstand von Zeile zu Zeile */
-    margin-bottom: 5px;
-    
 }
 
 
@@ -580,16 +491,10 @@ cite img {
 }
 
 
-/* ---------------------------- */
-/* SIGN UP*/
-/* ---------------------------- */
-
-.section-plans {
-    background-color: #f4f4f4;
-}
 
 
-.offer-box {
+
+.shadow-box {
     background-color:  #fff; /* #fcfcfc; */
     border-radius: 5px;
     /* Es soll nicht 100% des parents einnehmen */
@@ -603,42 +508,24 @@ cite img {
    
 }
 
-.offer-box div{
+.shadow-box div{
     border-bottom: 1px solid #e8e8e8;
     padding: 15px;
 }
 
-.plan-price {
-    font-size: 300%;
-    color: #104686;
-    margin-bottom: 10px;
-    font-weight: 100;
-}
-
-
-.plan-price span {
-    font-size: 30%;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.plan-price-meal {
-    font-size: 80%;
-}
-
 /* Die Liste soll keine Punkte haben für jedes Element */
-.offer-box ul {
+.shadow-box ul {
   list-style-type: none;
   margin-left: 10px;
  padding-left: 1.7em;
  text-indent: -1.7em;
 }
 
-.offer-box ul li {
+.shadow-box ul li {
     padding: 15px 0;
 }
 
-.offer-box i {
+.shadow-box i {
     color: #104686;
     padding-left: 5px;
 }
@@ -648,7 +535,7 @@ cite img {
    zugreift. */
 
 
-/*.offer-box div:first-child {
+/*.shadow-box div:first-child {
     background-color: #fcfcfc;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -880,4 +767,21 @@ footer p {
 .createShadow img{
    /* -webkit-box-shadow: 0 20px 20px #e3e3e3;
     box-shadow: 0 20px 20px #e3e3e3; */
+}
+
+.form-nachrichten {
+    width: 70%;
+    margin: 0 auto; /* center */
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.success {
+    background-color: #26bf44;
+}
+
+.error {
+    background-color: #d12e2e;
 }
