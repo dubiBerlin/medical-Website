@@ -10,7 +10,6 @@ body {
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    /* rendert die fonts auf gute Art und Weise */
     color: #555;
     unicode-range: U+0400-04FF;
 }
@@ -19,13 +18,10 @@ body {
 	font-family: 'Lato';
 	font-style: normal;
     font-weight: 400;
-/*	src: url("../font/Lato-Thin.woff")  format('woff'); */
 	src: url("../font/Lato-Regular.ttf")  format('truetype'); 
-/*	src: url("../font/Lato-Thin.ttf") format('truetype');*/
     text-rendering: optimizeLegibility;
 }
 
-/* entfernt nachträglich die floats */
 .clearfix{zoom: 1}
 .clearfix:after{
     content:'.';
@@ -64,40 +60,20 @@ section {
     margin: 1% 0 1% 1.6%;
 }
 
-/**/
-/*header{
-    /* linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) transperiert das background img  */
-   /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(imgr/start.png);
-    /* Displays the complete background image */
-    /*background-size: cover;
-    /* Macht so dass das background img stehen bleibt */
-    /*background-attachment: fixed;
-    background-position: center;
-     /* 100% des Viewports um das Background-image komplett darzustellen */
-   /* height: 100vh;
-}*/
-
 .child-container {
-	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))),url(imgr/start.png);
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(imgr/start.png);
-    /* Displays the complete background image */
     background-size: cover;
-    /* Macht so dass das background img stehen bleibt */
     background-attachment: fixed;
     background-position: center;
-     /* 100% des Viewports um das Background-image komplett darzustellen */
     height: 100vh;
 }
 
 .hero-text-box{
-    /* position muss absolut sein damit man den div vertikal und horizontal
-       zentrieren kann */
     position: absolute;
     width: 1140px;
     top: 50%;
     left: 50%;
-    /* top und left soll auf die Mitte des divs hero-text-box setzen */
     -webkit-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
 }
@@ -113,10 +89,7 @@ h1{
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
-    /* für responsive muss es auf % gesetzt sein.
-       200% von den angegebenen Pixel im html weiter oben*/
     font-size: 240%;
-    /* h1 hat einen margin der entfernt werden muss */
     margin: 0;
     word-spacing: 4px;
     letter-spacing: 1px;
@@ -136,15 +109,12 @@ h3 {
 }
 
 
-/* Das Element was nach dem h2 kommen soll */
 h2:after{
     display: block;
     height: 2px;
     background-color: #104686;
-    /* after muss immer einen content enthalten */
     content: " ";
     width: 100px;
-    /* Setzt das Element mittig */
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -154,11 +124,9 @@ h2:after{
 .long-copy {
     line-height: 145%;
     width: 98%;
-    /* Element ist 70% breit und mit 15% Abstand zum linken Rand, wird es mittig gesetzt */
     margin-left: 1%;
 }
 
-/* über die Box Klasse auf alle p Elemente innerhalb des Elements der boxklasse zugreifen */
 .box p {
     font-size: 90%;
     line-height: 145%;
@@ -167,29 +135,21 @@ h2:after{
 /* ---------- ICONS ---------- */
 .icon-big{
     font-size: 350%;
-    /* display block erstellt einen Zeilenumbruch */
     display: block;
     color:  #104686;
-    /* Abstand vom Icon zum unteren h3 Element */
     margin-bottom: 10px;
 }
 
 .icon-small {
-    /* inline-block um es zu ermöglichen width Attribut anzuhängen */
     display: inline-block;
     width: 30px;
-    /* Die icons werden innerhalb des inline-blocks mittig gesetzt */
     text-align: center;
     color:  #104686;
     font-size: 150%;
-    /* bisschen Abstand zum rechts nebenstehenden Text */
     margin-right: 5px;
     
-    /* Text und icons in einer höhe setzen */
-    /* Technik 1 */
     line-height: 120%;
     vertical-align: middle;
-    /* Technik 2 Hebt das icon bisschen hoch */
     margin-top: -4px;
 }
 
@@ -202,7 +162,6 @@ a:link,
 a:visited {
     color:  #104686;
     text-decoration: none;
-    /* Bisschen Absrand zwischen Text und border erstellen. */
     padding-bottom: 1px;
     border-bottom: 1px solid #104686;
     -webkit-transition: border-bottom 0.2s color 0.2s;
@@ -216,13 +175,10 @@ a:active {
 
 
 /* ---------- BUTTONS ---------- */
-
-/* Link bedeutet das Element ist im normalen Status und kein Hover, active oder so */
 .btn:link,
 .btn:visited,
 input[type=submit]{
     display: inline-block;
-    /* 10px für top und bottom 30 px für left und right */
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
@@ -278,11 +234,10 @@ input[type=submit]:active{
     float: left;
     
     position: absolute;
-    height: 350px;
+    height: 320px;
     width: auto;
-    top: 65%;
+    top: 70%;
     left: 34%;
-    /* top und left soll auf die Mitte des divs hero-text-box setzen */
     -webkit-transform:translate(-70%,-30%);
     transform:translate(-70%,-30%);
 }
@@ -292,6 +247,7 @@ input[type=submit]:active{
     float: left;
     list-style:none;
     margin-top: 67px;
+    margin-left: 0px;
 }
 
 .marginLeft{
@@ -299,20 +255,18 @@ input[type=submit]:active{
 }
 
 .main-nav li {
-    /* li elemente stehen horizontal nebeneinander */
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0 ;
-    color: #fff;/* #104686; = logo blau*/ /* #D7172E = logo rot */ /* #fff = weiß */
-    /* macht den Strich unterhalb des links weg */
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%;
+    font-size: 80%;
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s; 
@@ -331,7 +285,6 @@ input[type=submit]:active{
     display: none;
 }
 
-/* das icon stylen zugriff über den klassennamen der eltern */
 .mobile-nav-icon i {
     font-size: 200%;
     color: #fff;
@@ -345,9 +298,8 @@ input[type=submit]:active{
     left: 0;
     width: 100%;
     background-color: rgba(255,255,255,0.98);
+    -webkit-box-shadow: 0 2px 2px #efefef;
     box-shadow: 0 2px 2px #efefef;
-    /* Das Element mit der Klasse sticky ist immer am obersten von allen 
-       anderen Elementen */
     z-index: 9999;
 }
 
@@ -385,9 +337,6 @@ input[type=submit]:active{
 }
 
 
-/* ---------------------------- */
-/* HOW IT WORKS */
-/* ---------------------------- */
 
 .section-aboutus{
     background-color: #f4f4f4;
@@ -397,14 +346,13 @@ input[type=submit]:active{
 	background-color: *#f4f4f4;
 }
 
-/* Greift auf die erste linke Spalte zu */
-.step-box:first-child {
+.schritt-box:first-child {
     text-align: right;
     padding-right: 3%;
     margin-top: 30px;
 }
 
-.step-box:last-child {
+.schritt-box:last-child {
     padding-left: 3%;
     margin-top: 30px;
 }
@@ -417,7 +365,6 @@ input[type=submit]:active{
 
 .btn-app:link,
 .btn-app:visited {
-    /* Linie entfernen von den beiden App buttons weil sie ja ein link sind */
     border: 0;
 }
 
@@ -430,29 +377,19 @@ input[type=submit]:active{
 
 
 .box img {
-    /* Das Bild soll so breit wie der Elternteil sein, ihn komplett ausfüllen */
     width: 100%;
-    /* Die Höhe wird dadurch automatisch gesetzt */
     height: auto;
-    /* Abstand zum unteren <h3> Element erstellen */
     margin-bottom: 15px;
 }
 
 
 
-/* ---------------------------- */
-/* CUSTOMERS */
-/* ---------------------------- */
-
 
 .section-komentare{
-    /* linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) transperiert das background img  */
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))),url(imgr/modernes-ui.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(imgr/modernes-ui.jpg); /*  macht das bild dunkler*/
-    /* image has to fill the whole width of the browser */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(imgr/modernes-ui.jpg); 
     background-size: cover;
     color: #fff;
-    /* Macht so dass das background img stehen bleibt */
     background-attachment: fixed;
 }
 
@@ -460,18 +397,15 @@ blockquote {
     padding: 2%;
     font-style: italic; /**/
     line-height: 145%;
-    /* Der Elternteil muss relativ gesetzt sein damit man in blockquote:before es auf absolut setzen kann */
     position: relative;
     margin-top: 40px;
 }
 
 
 blockquote:before {
-    content: "\201C"; /* Die Anführungszeichen */
+    content: "\201C"; 
     font-size: 500%;
-    /* Um Zeilenumbruch zu erzwingen */
     display: block;
-    /* auf absolute setzen und dann kann man mit top usw bestimmen wo es gesetzt wird */
     position: absolute;
     top: -5px;
     left: -5px;
@@ -495,12 +429,9 @@ cite img {
 
 
 .shadow-box {
-    background-color:  #fff; /* #fcfcfc; */
+    background-color:  #fff; 
     border-radius: 5px;
-    /* Es soll nicht 100% des parents einnehmen */
     width: 100%;
-    /* Innerhalb des parents (col span-1-of-3) mittig setzen. Es ist ja nur 90% also 10%
-       bleiben übrig. Also von beiden Seiten innerhalb des PArents je 5% */
    margin-top: 20px;
     padding: 30px;
     -webkit-box-shadow: 0 20px 20px #e3e3e3;
@@ -530,17 +461,6 @@ cite img {
     padding-left: 5px;
 }
 
-/* Die "Sign Up" Buttons mittig setzen
-   indem man auf das letzte div Element
-   zugreift. */
-
-
-/*.shadow-box div:first-child {
-    background-color: #fcfcfc;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}*/
-
 
 
 /* ---------------------------- */
@@ -548,7 +468,6 @@ cite img {
 /* ---------------------------- */
 .contact-form {
     width: 60%;
-    /* Zentriert die form innerhalbt des parent Elements */
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -572,7 +491,6 @@ input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
-/* remove ugly blue borders for all elements */
 *:focus {
     outline: none;
 }
@@ -604,19 +522,16 @@ footer{
 
 .footer-nav li,
 .social-links li {
-    /* inline-block machen keine Zeilenumbrüche also sinbd sie nebeneinander*/
     display: inline-block;
     margin-right: 20px;
 }
 
 
-/* margin right damit das letzte element genau am rand der zeile liegt */
 .footer-nav li:last-child,
 .social-links li:last-child{
     margin-right: 0;
 }
 
-/* Die links innerhalb des li elements formatieren */
 .footer-nav li a:link,
 .footer-nav li a:visited,
 .social-links li a:link,
@@ -690,8 +605,6 @@ footer p {
 .js--wp-2,
 .js--wp-3,
 .js--wp-5 {
-    /* opacity:0 lässt den div verschwinden. Muss so sein damit er ein-
-       gefadet wird */
     opacity: 0;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -706,8 +619,6 @@ footer p {
 .js--wp-2.animated,
 .js--wp-3.animated,
 .js--wp-5.animated, {
-    /* wird die Klasse js--wp-1 etc erreicht, wird die Klasse animated
-      im script hinzugefügt. opacity:1 macht den div sichtbar */
     opacity: 1;
 }
 
@@ -747,7 +658,6 @@ footer p {
 	padding: 1%;
 	width: 100%;
 	height:60px;
-	/* linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) transperiert das background img  */
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))),url(imgr/chirurg.jpg);
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(imgr/chirurg.jpg);
 }
@@ -756,10 +666,8 @@ footer p {
 	display: block;
     height: 2px;
     background-color: #104686;
-    /* after muss immer einen content enthalten */
     content: " ";
     width: 100px;
-    /* Setzt das Element mittig */
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -769,13 +677,14 @@ footer p {
     box-shadow: 0 20px 20px #e3e3e3; */
 }
 
-.form-nachrichten {
+.form-messages {
     width: 70%;
     margin: 0 auto; /* center */
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 30px;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
 .success {

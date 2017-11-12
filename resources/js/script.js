@@ -49,6 +49,10 @@ $(document).ready(function(){
         $("html, body").animate( {scrollTop: $(".js--section-kontakte").offset().top},1000 );
     });
     
+    $(".logo-sticky").click( function(){
+        $("html, body").animate( {scrollTop: $(".child-container").offset().top},1000 );
+    });
+    
     
     /* animations beims scrollen */
     $(".js--wp-1").waypoint(function(direction){
@@ -87,7 +91,6 @@ $(document).ready(function(){
         nav.slideToggle(200);
         
         
-        
         if(icon.hasClass("ion-navicon-round")){
             icon.removeClass("ion-navicon-round");
             icon.addClass("ion-close-round");
@@ -100,9 +103,55 @@ $(document).ready(function(){
     });
     
     
+    /* Email submit form function */
+    $("#submitBtn").click( function(){
+       
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+        
+        if (name == '' || email == '' || message == ''){
+           printAndRemoveMessage("error", "Es müssen alle Felder ausgefüllt werden");
+            
+        }
+        /* Check if email is ok */
+        if(!validateEmail(email)){
+            printAndRemoveMessage("error", "Geben Sie eine korrekte Email-Adresse ein");
+        }
+        else{ 
+            
+            $.ajax({
+                url:"mailer.php", 
+                method:"POST",
+                data:{name:name, email:email, message:message},
+                success: function(data){
+                    $("#mailForm").trigger("reset");
+                    printAndRemoveMessage("success", data);
+                }
+            }); 
+        }
+        
+    });
+    
+    
+    function validateEmail(Email) {
+        var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        return $.trim(Email).match(pattern) ? true : false;
+    }
     
     
     
-    
+    function printAndRemoveMessage(className, message){
+         $(".form-messages").addClass(className);
+           $(".form-messages").text(message);    
+           $(".form-messages").hide().fadeIn();  
+            
+            setTimeout(function(){
+                $(className).fadeOut("slow");
+                $(".form-messages").removeClass(className);
+                $(".form-messages").text("");  
+            }, 3000);
+    }
     
 });
