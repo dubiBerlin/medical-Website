@@ -4,10 +4,7 @@
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Берлин,медицина,лечение,больници в Берлине,,Германия,в,рачи,медицинский туризм,переводчики в Берлине,медицинские переводчики,медицинское сопровождение,обследование ,диагностика,реабилитациа,медицинская организация,операции,операция,врач,професор,професора,консультант,консультации,консультация,   трансфер,трансферы,обслуживаний,обслуживание,гостиница,гостиницы,обслуживаний,обслуга " >  
-    
-      <meta name="description" content="Организация лечения в Берлине,соправаждение на консультации,переводчик,транспорт,Визовая подержка" >
-      
+    <meta name="description" content="Берлин,медицина,лечение,больници в Берлине,,Германия,в,рачи,медицинский туризм,переводчики в Берлине,медицинские переводчики,медицинское сопровождение,обследование ,диагностика,реабилитациа,медицинская организация,операции,операция,врач,професор,професора,консультант,консультации,консультация,   трансфер,трансферы,обслуживаний,обслуживание,гостиница,гостиницы,обслуживаний,обслуга " >  
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
@@ -391,7 +388,7 @@
                         <label for="name">имя</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+                        <input type="text" name="name" id="name" placeholder="Ваше имя" class="textfeld-st" required>
                     </div>
                 </div>
                 <div class="row">
@@ -399,7 +396,7 @@
                         <label for="email">эмаль</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="email" name="email" id="email" placeholder="ваш Эл. адрес " required>
+                        <input type="email" name="email" id="email" placeholder="ваш Эл. адрес " class="textfeld-st" required>
                     </div>
                 </div>
                 <div class="row">
@@ -407,7 +404,7 @@
                         <label>написать сообщение</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <textarea name="message" id="message" placeholder="ваше сообщение"></textarea>
+                        <textarea name="message" id="message" placeholder="ваше сообщение" class="textfeld-st"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -415,7 +412,7 @@
                         <label>&nbsp;</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="button" name=submit id="submitBtn" value="послать!">
+                        <input type="button" class="send-btn" name=submit id="submitBtn" value="послать!">
                     </div>
                 </div>
                     

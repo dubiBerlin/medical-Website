@@ -102,6 +102,11 @@ $(document).ready(function(){
         }
     });
     
+    function validateEmail(Email) {
+        var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        return $.trim(Email).match(pattern) ? true : false;
+    }
     
     /* Email submit form function */
     $("#submitBtn").click( function(){
@@ -110,16 +115,23 @@ $(document).ready(function(){
         var email = $("#email").val();
         var message = $("#message").val();
         
-        if (name == '' || email == '' || message == ''){
-           printAndRemoveMessage("error", "Es müssen alle Felder ausgefüllt werden");
-            
+        if (name == ''){
+            $("#name").addClass("textfeld-error");
+        } 
+        if( email == '' ){
+           $("#email").addClass("textfeld-error");
+         }
+        if (message == ''){
+           $("#message").addClass("textfeld-error");
         }
         /* Check if email is ok */
         if(!validateEmail(email)){
-            printAndRemoveMessage("error", "Geben Sie eine korrekte Email-Adresse ein");
+            $("#email").addClass("textfeld-error");
         }
         else{ 
-            
+            $("#name").removeClass("textfeld-error");
+            $("#email").removeClass("textfeld-error");
+            $("#message").removeClass("textfeld-error");
             $.ajax({
                 url:"mailer.php", 
                 method:"POST",
@@ -134,14 +146,6 @@ $(document).ready(function(){
     });
     
     
-    function validateEmail(Email) {
-        var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-
-        return $.trim(Email).match(pattern) ? true : false;
-    }
-    
-    
-    
     function printAndRemoveMessage(className, message){
          $(".form-messages").addClass(className);
            $(".form-messages").text(message);    
@@ -151,7 +155,9 @@ $(document).ready(function(){
                 $(className).fadeOut("slow");
                 $(".form-messages").removeClass(className);
                 $(".form-messages").text("");  
-            }, 3000);
+            }, 10000);
     }
+    
+    
     
 });

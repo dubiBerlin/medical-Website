@@ -25,6 +25,6 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Redirect to the index.html page with success code
-    echo("Die Email wurde erfolgreich versendet. Wir werden sie in kürze kontaktieren.");
+    echo("Спасибо.Ваше сообщение отправлено!");
 
 ?>
